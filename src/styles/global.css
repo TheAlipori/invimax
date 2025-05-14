@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+@theme {
+    --font-pattaya: Pattaya, sans-serif;
+    --font-family: Yesteryear, cursive;
+    --font-gloock: Gloock, serif;
+  }
+
+
+
+@import 'aos/dist/aos.css';

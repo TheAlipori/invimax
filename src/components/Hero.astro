@@ -1,0 +1,47 @@
+---
+const { title, pareja, mensaje, imagen } = Astro.props;
+import "@fontsource/pattaya";
+import "@fontsource/yesteryear";
+---
+
+<section class="w-screen h-screen flex justify-center items-center relative">
+  <!-- Contenedor principal -->
+  <div class="relative w-full h-full mx-auto overflow-hidden">
+    <!-- Imagen con efecto suave -->
+    <img
+      src="/eugenia.jpg"
+      alt="Foto de la pareja"
+      class="w-full h-full object-cover transform scale-105"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    />
+
+    <!-- Overlay para legibilidad -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
+    </div>
+
+    <!-- Texto con animación unificada -->
+    <div
+      class="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-full px-4 text-center"
+    >
+      <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+        <h1
+          class="text-white text-6xl md:text-8xl font-gloock mb-2 tracking-wide"
+        >
+          RODRIGO
+        </h1>
+        <div
+          class="text-3xl md:text-6xl text-rose-100 font-playfair italic my-2"
+        >
+          &amp;
+        </div>
+        <h1
+          class="text-white text-6xl md:text-8xl font-gloock mt-2 tracking-wide"
+        >
+          MARIA
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
