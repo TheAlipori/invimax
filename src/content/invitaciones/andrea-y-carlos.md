@@ -1,6 +1,14 @@
 ---
 title: ¡Nuestra Boda!
-pareja: Juan y María
+
+#Hero section
+novio: Juan
+novia: María
+
+#Fecha
+dia: 20
+mes: 07
+ano: 25
 fecha: 20 de Diciembre, 2024
 lugar: Catedral de la Ciudad
 mensaje: "Queremos compartir contigo este momento especial"

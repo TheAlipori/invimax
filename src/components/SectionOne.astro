@@ -2,7 +2,9 @@
 import "@fontsource/gloock";
 import FlowerIcon from "../assets/FlowerIcon.astro";
 import Card from "./Card.astro";
-const { fecha_evento } = Astro.props;
+const { fecha_evento, dia, mes, ano } = Astro.props;
+import ElegantIcon2 from "../assets/ElegantIcon2.astro";
+import ElegantIcon1 from "../assets/ElegantIcon1.astro";
 ---
 
 <!-- src/components/SpecialMessage.astro -->
@@ -14,24 +16,33 @@ const { fecha_evento } = Astro.props;
   >
     <!-- Línea decorativa -->
     <div
-      class="absolute top-10 w-24 h-1 bg-black/20"
+      class="absolute top-10 w-24 h-1 bg-black"
       data-aos="fade-right"
       data-aos-delay="200"
     >
     </div>
+    <div class="items-start max-w-xl">
+      <p class="text-4xl">ESTÁS INVITADO</p>
+      <p class="font-pattaya text-4xl">A nuestra boda</p>
+      <p class="font-sans mt-6">
+        Con la bendición de nuestras familias y el amor que nos une, hemos
+        decidido unir nuestras vidas. Nos encantaría que nos acompañes a
+        celebrar este día tan importante para nosotros.
+      </p>
+    </div>
 
-    <div class="max-w-4xl text-center space-y-12">
+    <div class="max-w-4xl text-center space-y-12 mt-16">
       <!-- Primer texto -->
+
       <p
-        class="text-4xl md:text-5xl font-gloock text-gray-800 leading-snug"
+        class="text-4xl md:text-5xl font-gloock text-black leading-snug"
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        Acompáñanos a celebrar<br />
         <span
           class="text-3xl md:text-4xl font-normal font-playfair italic text-black"
         >
-          el día en que unimos nuestras vidas
+          Acompananos a celebrar el día en que unimos nuestras vidas
         </span>
       </p>
 
@@ -55,6 +66,7 @@ const { fecha_evento } = Astro.props;
         >
           inolvidable
         </span>
+        <ElegantIcon2 class="w-full max-h-18 mx-auto fill-amber-700" />
       </p>
     </div>
 
@@ -68,7 +80,7 @@ const { fecha_evento } = Astro.props;
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        <div class="text-8xl font-bold mb-2">26</div>
+        <div class="text-8xl font-bold mb-2">{dia}</div>
         <p class="text-xl font-semibold text-gray-600 mb-4">Día</p>
         <img
           src="/hero1.png"
@@ -85,7 +97,7 @@ const { fecha_evento } = Astro.props;
         data-aos="fade-down"
         data-aos-delay="300"
       >
-        <div class="text-8xl font-bold mb-2">01</div>
+        <div class="text-8xl font-bold mb-2">{mes}</div>
         <p class="text-xl font-semibold text-gray-600 mb-4">Mes</p>
         <img
           src="/hero1.png"
@@ -102,7 +114,7 @@ const { fecha_evento } = Astro.props;
         data-aos="fade-up"
         data-aos-delay="400"
       >
-        <div class="text-8xl font-bold mb-2">25</div>
+        <div class="text-8xl font-bold mb-2">{ano}</div>
         <p class="text-xl font-semibold text-gray-600 mb-4">Año</p>
         <img
           src="/hero1.png"
@@ -135,16 +147,12 @@ const { fecha_evento } = Astro.props;
         data-aos="fade-down"
         data-aos-delay="200"
       >
-        Faltan
+        Cuenta regresiva para el gran día
       </h2>
 
       <div class="flex justify-center gap-8 flex-wrap">
         <!-- Días -->
-        <div
-          class="bg-white p-6 rounded-xl border-2 border-black shadow-md hover:shadow-lg transition-transform hover:scale-105"
-          data-aos="flip-left"
-          data-aos-delay="300"
-        >
+        <div class="p-6" data-aos="flip-left" data-aos-delay="300">
           <div
             class="text-7xl font-bold mb-2 text-black animate-count"
             id="dias"
@@ -156,7 +164,7 @@ const { fecha_evento } = Astro.props;
 
         <!-- Separador -->
         <div
-          class="self-center text-4xl text-gray-400 hidden md:block animate-bounce-horizontal"
+          class="self-center text-4xl text-black hidden md:block animate-bounce-horizontal"
           data-aos="fade-in"
           data-aos-delay="400"
         >
@@ -164,11 +172,7 @@ const { fecha_evento } = Astro.props;
         </div>
 
         <!-- Horas -->
-        <div
-          class="bg-white p-6 rounded-xl border-2 border-black shadow-md hover:shadow-lg transition-transform hover:scale-105"
-          data-aos="flip-up"
-          data-aos-delay="350"
-        >
+        <div class="p-6" data-aos="flip-up" data-aos-delay="350">
           <div
             class="text-7xl font-bold mb-2 text-black animate-count"
             id="horas"
@@ -180,7 +184,7 @@ const { fecha_evento } = Astro.props;
 
         <!-- Separador -->
         <div
-          class="self-center text-4xl text-gray-400 hidden md:block animate-bounce-horizontal"
+          class="self-center text-4xl text-black hidden md:block animate-bounce-horizontal"
           data-aos="fade-in"
           data-aos-delay="450"
         >
@@ -188,11 +192,7 @@ const { fecha_evento } = Astro.props;
         </div>
 
         <!-- Minutos -->
-        <div
-          class="bg-white p-6 rounded-xl border-2 border-black shadow-md hover:shadow-lg transition-transform hover:scale-105"
-          data-aos="flip-down"
-          data-aos-delay="400"
-        >
+        <div class="p-6" data-aos="flip-down" data-aos-delay="400">
           <div
             class="text-7xl font-bold mb-2 text-black animate-count"
             id="minutos"
@@ -204,7 +204,7 @@ const { fecha_evento } = Astro.props;
 
         <!-- Separador -->
         <div
-          class="self-center text-4xl text-gray-400 hidden md:block animate-bounce-horizontal"
+          class="self-center text-4xl text-amber-700 hidden md:block animate-bounce-horizontal"
           data-aos="fade-in"
           data-aos-delay="500"
         >
@@ -212,13 +212,9 @@ const { fecha_evento } = Astro.props;
         </div>
 
         <!-- Segundos -->
-        <div
-          class="bg-white p-6 rounded-xl border-2 border-black shadow-md hover:shadow-lg transition-transform hover:scale-105"
-          data-aos="flip-right"
-          data-aos-delay="450"
-        >
+        <div class="p-6" data-aos="flip-right" data-aos-delay="450">
           <div
-            class="text-7xl font-bold mb-2 text-black animate-count"
+            class="text-7xl font-bold mb-2 text-amber-700 animate-count"
             id="segundos"
           >
             0

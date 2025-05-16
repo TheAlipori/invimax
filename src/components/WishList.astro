@@ -1,16 +1,17 @@
+---
+import AmazonIcon from "../assets/amazonIcon.astro";
+---
+
 <section class="relative py-20 px-6 bg-white">
   <div class="max-w-3xl mx-auto text-center">
-    <h2
-      class="text-4xl md:text-5xl font-gloock mb-8 text-gray-800"
-      data-aos="fade-up"
-    >
+    <h2 class="text-4xl md:text-5xl font-gloock mb-8" data-aos="fade-up">
       Nuestra Wishlist
     </h2>
 
     <div class="flex flex-col items-center space-y-8">
       <!-- Texto descriptivo -->
       <div class="max-w-xl" data-aos="fade-up" data-aos-delay="200">
-        <p class="text-lg text-gray-600 leading-relaxed">
+        <p class="text-lg leading-relaxed">
           Si deseas contribuir a nuestro nuevo hogar,<br />
           estas son algunas cosas que necesitamos
         </p>
@@ -18,18 +19,17 @@
 
       <!-- Tarjeta de wishlist -->
       <div class="w-full max-w-md" data-aos="fade-up" data-aos-delay="400">
-        <div
-          class="bg-rose-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
-        >
-          <h3 class="text-2xl font-semibold mb-6 text-rose-600 text-center">
+        <div class="p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <h3 class="text-2xl font-semibold mb-6 text-center">
             Regalos que apreciaremos
           </h3>
           <div class="flex justify-center">
             <a
               href="TU_ENLACE_DE_WISHLIST_AQUI"
               target="_blank"
-              class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 transition-colors duration-300"
+              class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-700 hover:bg-black transition-colors duration-300"
             >
+              <AmazonIcon class="size-9 fill-white mr-3" />
               Ver Wishlist
             </a>
           </div>

@@ -3,7 +3,7 @@ import "../../styles/global.css"; // Importa tu CSS global aquí
 
 // [slug].astro
 import { getEntryBySlug, getCollection } from "astro:content";
-import HeroSection from "../../components/Hero.astro";
+import Hero from "../../components/Hero.astro";
 import SectionOne from "../../components/SectionOne.astro";
 import SectionTwo from "../../components/SectionTwo.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -13,6 +13,7 @@ import GoogleMaps from "../../components/GoogleMaps.astro";
 import Whatsapp from "../../components/Whatsapp.astro";
 import CodigodeVestimenta from "../../components/CodigodeVestimenta.astro";
 import WishList from "../../components/WishList.astro";
+import Quotes from "../../components/Quotes.astro";
 // Esto es OBLIGATORIO para rutas dinámicas
 export async function getStaticPaths() {
   const entries = await getCollection("invitaciones");
@@ -31,16 +32,28 @@ if (!entry) {
   });
 }
 
-const { title, fecha, lugar, mensaje, pareja, fecha_evento } = entry.data;
+const {
+  title,
+  fecha,
+  lugar,
+  mensaje,
+  fecha_evento,
+  novio,
+  novia,
+  dia,
+  mes,
+  ano,
+} = entry.data;
 const { Content } = await entry.render();
 const { itinerario } = entry.data;
 ---
 
 <Layout>
-  <HeroSection title={title} pareja={pareja} mensaje={mensaje} />
-  <SectionOne fecha_evento={fecha_evento} />
+  <Hero title={title} mensaje={mensaje} novio={novio} novia={novia} />
+  <SectionOne fecha_evento={fecha_evento} dia={dia} mes={mes} ano={ano} />
   <Itinerario itinerario={itinerario} />
   <SectionTwo />
+  <Quotes />
   <CodigodeVestimenta />
   <WishList />
   <Whatsapp />

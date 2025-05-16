@@ -1,17 +1,18 @@
 ---
-const { title, pareja, mensaje, imagen } = Astro.props;
+const { title, pareja, mensaje, imagen, novio, novia } = Astro.props;
 import "@fontsource/pattaya";
 import "@fontsource/yesteryear";
+import ScrollIcon from "../assets/ScrollIcon.astro";
 ---
 
-<section class="w-screen h-screen flex justify-center items-center relative">
+<section class="w-screen h-dvh flex justify-center items-center relative">
   <!-- Contenedor principal -->
   <div class="relative w-full h-full mx-auto overflow-hidden">
     <!-- Imagen con efecto suave -->
     <img
       src="/eugenia.jpg"
       alt="Foto de la pareja"
-      class="w-full h-full object-cover transform scale-105"
+      class="w-full h-full object-cover transform scale-100"
       data-aos="zoom-in"
       data-aos-duration="1500"
       data-aos-easing="ease-out-quad"
@@ -27,9 +28,9 @@ import "@fontsource/yesteryear";
     >
       <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
         <h1
-          class="text-white text-6xl md:text-8xl font-gloock mb-2 tracking-wide"
+          class="text-white text-7xl md:text-8xl font-gloock mb-2 tracking-wide"
         >
-          RODRIGO
+          {novio}
         </h1>
         <div
           class="text-3xl md:text-6xl text-rose-100 font-playfair italic my-2"
@@ -37,10 +38,16 @@ import "@fontsource/yesteryear";
           &amp;
         </div>
         <h1
-          class="text-white text-6xl md:text-8xl font-gloock mt-2 tracking-wide"
+          class="text-white text-7xl md:text-8xl font-gloock mt-2 tracking-wide"
         >
-          MARIA
+          {novia}
         </h1>
+        <h1
+          class="text-white text-3xl md:text-4xl font-gloock mt-2 tracking-wide"
+        >
+          NOS CASAMOS
+        </h1>
+        <h1 class="text-white text-4xl animate-bounce mt-2">↓</h1>
       </div>
     </div>
   </div>
