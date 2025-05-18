@@ -10,3 +10,14 @@
 
 
 @import 'aos/dist/aos.css';
+
+@layer utilities {
+  /* Estos son los colores que quieres que Tailwind compile */
+  .bg-rose-500 {}
+  .text-rose-500 {}
+  .border-rose-500 {}
+  .fill-rose-500 {}
+
+ 
+  /* Agrega aquí todos los que podrías usar */
+}
