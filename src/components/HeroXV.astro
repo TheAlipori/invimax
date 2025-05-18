@@ -20,8 +20,26 @@ import ScrollIcon from "../assets/ScrollIcon.astro";
       data-aos-easing="ease-out-quad"
     />
 
-    <!-- Overlay para legibilidad -->
+    <!-- Botón para reproducir canción -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+      <button
+        id="playBtn"
+        class="bg-white/80 hover:bg-white text-rose-600 font-semibold px-6 py-3 rounded-full shadow-md flex items-center gap-2 backdrop-blur-md transition"
+      >
+        🎵 Reproducir canción
+      </button>
+    </div>
 
-    <!-- Texto con animación unificada -->
+    <!-- Elemento de audio oculto -->
+    <audio id="bgMusic">
+      <source src="/cancion.mp3" type="audio/mpeg" />
+    </audio>
   </div>
 </section>
+
+<script>
+  document.getElementById("playBtn").addEventListener("click", function () {
+    const audio = document.getElementById("bgMusic");
+    audio.play();
+  });
+</script>

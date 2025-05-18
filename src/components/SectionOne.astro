@@ -38,7 +38,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
     </div>
     <div class="items-start max-w-xl">
       <p class="text-4xl">{texto1}</p>
-      <p class="font-pattaya text-4xl">{texto2}</p>
+      <p class=`font-pattaya text-4xl text-${colorPrimario} `>{texto2}</p>
       <p class="font-sans mt-6">
         {texto3}
       </p>
@@ -48,13 +48,11 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
       <!-- Primer texto -->
 
       <p
-        class="text-4xl md:text-5xl font-gloock text-black leading-snug"
+        class="text-4xl md:text-5xl font-gloock leading-snug"
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        <span
-          class="text-3xl md:text-4xl font-normal font-playfair italic text-black"
-        >
+        <span class="text-3xl md:text-4xl font-normal font-playfair italic">
           {texto4}
         </span>
       </p>
@@ -69,7 +67,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
 
       <!-- Segundo texto -->
       <p
-        class={`text-3xl md:text-4xl font-gloock text-${colorPrimario} leading-snug`}
+        class=`text-${colorPrimario} text-3xl md:text-4xl font-gloock  leading-snug`
         data-aos="fade-up"
         data-aos-delay="500"
       >
@@ -219,7 +217,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
 
         <!-- Separador -->
         <div
-          class="self-center text-4xl text-amber-700 hidden md:block animate-bounce-horizontal"
+          class="self-center text-4xl text-black hidden md:block animate-bounce-horizontal"
           data-aos="fade-in"
           data-aos-delay="500"
         >

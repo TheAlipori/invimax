@@ -9,10 +9,10 @@ imagen2: "/2.jpg"
 imagen3: "/3.jpg"
 imagen4: "/4.jpg"
 #Fecha
-dia: 15
-mes: 06
+dia: 12
+mes: 07
 ano: 25
-fecha: 15 de julio de 2025
+fecha: 12 de julio de 2025
 lugar: Catedral de la Ciudad
 padrexv: Jairo sarellana Cabrales
 madrexv: Armida flores Saucedo
