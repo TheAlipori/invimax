@@ -1,0 +1,121 @@
+---
+import "../../styles/global.css"; // Importa tu CSS global aquí
+
+// [slug].astro
+import { getEntryBySlug, getCollection } from "astro:content";
+import HeroXV from "../../components/HeroXV.astro";
+import SectionOne from "../../components/SectionOne.astro";
+import SectionTwo from "../../components/SectionTwo.astro";
+import Layout from "../../layouts/Layout.astro";
+import Itinerario from "../../components/Itinerario.astro";
+import Card from "../../components/Card.astro";
+import GoogleMaps from "../../components/GoogleMaps.astro";
+import Whatsapp from "../../components/Whatsapp.astro";
+import CodigodeVestimenta from "../../components/CodigodeVestimenta.astro";
+import WishList from "../../components/WishList.astro";
+import Quotes from "../../components/Quotes.astro";
+import Padres from "../../components/Padres.astro";
+import DetallesXV from "../../components/DetallesXV.astro";
+import NameXV from "../../components/NameXV.astro";
+// Esto es OBLIGATORIO para rutas dinámicas
+export async function getStaticPaths() {
+  const entries = await getCollection("invitaciones");
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntryBySlug("invitaciones", slug);
+
+if (!entry) {
+  return new Response(null, {
+    status: 404,
+    statusText: "Invitación no encontrada",
+  });
+}
+
+const {
+  title,
+  fecha,
+  lugar,
+  mensaje,
+  fecha_evento,
+  novio,
+  novia,
+  dia,
+  mes,
+  ano,
+  colorPrimario,
+  imagen,
+  imagen2,
+  imagen3,
+  imagen4,
+  evento,
+  texto1,
+  texto2,
+  texto3,
+  texto4,
+  texto5,
+  texto6,
+  padrexv,
+  madrexv,
+  quote,
+  ceremonia,
+  recepcion,
+  nombreIglesia,
+  direccionIglesia,
+  horaIglesia,
+  nombreFiesta,
+  direccionFiesta,
+  horaFiesta,
+  numerowp,
+} = entry.data;
+const { Content } = await entry.render();
+const { itinerario } = entry.data;
+---
+
+<Layout>
+  <HeroXV
+    title={title}
+    mensaje={mensaje}
+    novio={novio}
+    novia={novia}
+    imagen={imagen}
+    evento={evento}
+  />
+  <NameXV />
+  <SectionOne
+    fecha_evento={fecha_evento}
+    dia={dia}
+    mes={mes}
+    ano={ano}
+    texto1={texto1}
+    texto2={texto2}
+    texto3={texto3}
+    texto4={texto4}
+    texto5={texto5}
+    texto6={texto6}
+    colorPrimario={colorPrimario}
+    imagen2={imagen2}
+    imagen3={imagen3}
+    imagen4={imagen4}
+  />
+  <Padres madrexv={madrexv} padrexv={padrexv} colorPrimario={colorPrimario} />
+  <Quotes colorPrimario={colorPrimario} quote={quote} />
+
+  <Itinerario itinerario={itinerario} />
+  <Whatsapp numerowp={numerowp} colorPrimario={colorPrimario} />
+
+  <GoogleMaps
+    lugar={lugar}
+    recepcion={recepcion}
+    ceremonia={ceremonia}
+    nombreIglesia={nombreIglesia}
+    direccionIglesia={direccionIglesia}
+    horaIglesia={horaIglesia}
+    nombreFiesta={nombreFiesta}
+    direccionFiesta={direccionFiesta}
+    horaFiesta={horaFiesta}
+  />
+</Layout>

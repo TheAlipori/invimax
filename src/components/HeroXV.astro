@@ -1,0 +1,27 @@
+---
+const { title, pareja, mensaje, imagen, novio, novia, evento } = Astro.props;
+import "@fontsource/pattaya";
+import "@fontsource/yesteryear";
+import ScrollIcon from "../assets/ScrollIcon.astro";
+---
+
+<section
+  class="w-screen h-dvh flex justify-center items-center relative bg-pink-200"
+>
+  <!-- Contenedor principal -->
+  <div class="relative w-full h-full mx-auto overflow-hidden">
+    <!-- Imagen con efecto suave -->
+    <img
+      src={imagen}
+      alt="Foto de la pareja"
+      class="w-full h-full object-cover transform scale-100"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    />
+
+    <!-- Overlay para legibilidad -->
+
+    <!-- Texto con animación unificada -->
+  </div>
+</section>

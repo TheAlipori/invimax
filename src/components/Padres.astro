@@ -1,0 +1,94 @@
+---
+const { padrexv, madrexv, colorPrimario } = Astro.props;
+import MotherIcon from "../assets/motherIcon.astro";
+import FatherIcon from "../assets/fatherIcon.astro";
+---
+
+<section class="py-16 px-4 bg-white relative overflow-hidden">
+  <!-- Elementos decorativos -->
+
+  <h2
+    class="font-gloock text-center text-4xl md:text-5xl mb-12 text-gray-800"
+    data-aos="fade-up"
+  >
+    Con amor de nuestros padres
+  </h2>
+
+  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Padre -->
+    <div class="p-8 text-center" data-aos="fade-right" data-aos-delay="200">
+      <div class="mb-6 flex justify-center">
+        <div
+          class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center"
+        >
+          <!-- <svg
+            class="w-12 h-12 text-pink-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            ></path>
+          </svg> -->
+          <FatherIcon class=`w-12 h-12 fill-${colorPrimario}` />
+        </div>
+      </div>
+      <h3 class="text-2xl font-gloock text-gray-800 mb-2">
+        {padrexv}
+      </h3>
+      <p class="text-pink-600 italic">Padre de la Quinceañera</p>
+      <div class="mt-4 h-px bg-pink-100 mx-8"></div>
+      <p class="mt-4 text-gray-600">
+        "Mi princesa, que este día sea el inicio de todas tus bendiciones"
+      </p>
+    </div>
+
+    <!-- Madre -->
+    <div class="p-8 text-center" data-aos="fade-left" data-aos-delay="300">
+      <div class="mb-6 flex justify-center">
+        <div
+          class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center"
+        >
+          <!-- <svg
+            class="w-12 h-12 text-pink-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg> -->
+          <MotherIcon class=`w-12 h-12 fill-${colorPrimario}` />
+        </div>
+      </div>
+      <h3 class="text-2xl font-gloock text-gray-800 mb-2">
+        {madrexv}
+      </h3>
+      <p class="text-pink-600 italic">Madre de la Quinceañera</p>
+      <div class="mt-4 h-px bg-pink-100 mx-8"></div>
+      <p class="mt-4 text-gray-600">
+        "Hija mía, hoy celebramos el hermoso camino que tienes por delante"
+      </p>
+    </div>
+  </div>
+
+  <!-- Mensaje conjunto -->
+  <div
+    class="max-w-2xl mx-auto mt-12 text-center"
+    data-aos="fade-up"
+    data-aos-delay="400"
+  >
+    <p class="text-lg text-gray-500 italic">
+      "Agradecemos a Dios por permitirnos llegar a este día tan especial en la
+      vida de nuestra hija"
+    </p>
+  </div>
+</section>

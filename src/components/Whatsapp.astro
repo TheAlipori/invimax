@@ -1,5 +1,9 @@
+---
+const { numerowp, colorPrimario } = Astro.props;
+---
+
 <section
-  class="w-full px-4 py-10 flex flex-col items-center text-center"
+  class="w-full px-4 py-10 flex flex-col items-center text-center overflow-x-hidden"
   data-aos="fade-up"
 >
   <h2
@@ -18,10 +22,10 @@
     mucha alegría.
   </p>
   <a
-    href="https://wa.me/5216181234567?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda."
+    href=`https://wa.me/${numerowp}?text=Hola,%20confirmo%20mi%20asistencia.`
     target="_blank"
     rel="noopener noreferrer"
-    class="bg-gray-600 hover:bg-gray-950 text-white px-6 py-3 rounded-full text-lg font-medium transition"
+    class=`bg-${colorPrimario} hover:bg-gray-950 text-white px-6 py-3 rounded-full text-lg font-medium transition`
     data-aos="zoom-in"
     data-aos-delay="300"
   >

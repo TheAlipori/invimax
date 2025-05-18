@@ -1,9 +1,10 @@
 ---
 import ElegantIcon1 from "../assets/ElegantIcon1.astro";
+const { colorPrimario, quote } = Astro.props;
 ---
 
 <section
-  class="w-full px-6 py-16 flex flex-col justify-center items-center bg-black mt-6 mb-6"
+  class={`w-full px-6 py-16 flex flex-col justify-center items-center bg-${colorPrimario}   mt-6 mb-6`}
   data-aos="zoom-in"
   data-aos-duration="800"
   data-aos-once="true"
@@ -11,7 +12,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
   <blockquote
     class="text-2xl sm:text-3xl md:text-4xl text-center font-serif text-white max-w-3xl mb-10"
   >
-    “El amor no se mira, se siente, y aún más cuando ella está junto a mí.”
+    {quote}
   </blockquote>
 
   <div class="w-full">

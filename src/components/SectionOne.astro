@@ -2,7 +2,22 @@
 import "@fontsource/gloock";
 import FlowerIcon from "../assets/FlowerIcon.astro";
 import Card from "./Card.astro";
-const { fecha_evento, dia, mes, ano } = Astro.props;
+const {
+  fecha_evento,
+  dia,
+  mes,
+  ano,
+  texto1,
+  texto2,
+  texto3,
+  texto4,
+  texto5,
+  texto6,
+  colorPrimario,
+  imagen2,
+  imagen3,
+  imagen4,
+} = Astro.props;
 import ElegantIcon2 from "../assets/ElegantIcon2.astro";
 import ElegantIcon1 from "../assets/ElegantIcon1.astro";
 ---
@@ -22,12 +37,10 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
     >
     </div>
     <div class="items-start max-w-xl">
-      <p class="text-4xl">ESTÁS INVITADO</p>
-      <p class="font-pattaya text-4xl">A nuestra boda</p>
+      <p class="text-4xl">{texto1}</p>
+      <p class="font-pattaya text-4xl">{texto2}</p>
       <p class="font-sans mt-6">
-        Con la bendición de nuestras familias y el amor que nos une, hemos
-        decidido unir nuestras vidas. Nos encantaría que nos acompañes a
-        celebrar este día tan importante para nosotros.
+        {texto3}
       </p>
     </div>
 
@@ -42,7 +55,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
         <span
           class="text-3xl md:text-4xl font-normal font-playfair italic text-black"
         >
-          Acompananos a celebrar el día en que unimos nuestras vidas
+          {texto4}
         </span>
       </p>
 
@@ -56,17 +69,17 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
 
       <!-- Segundo texto -->
       <p
-        class="text-3xl md:text-4xl font-gloock text-gray-800 leading-snug"
+        class={`text-3xl md:text-4xl font-gloock text-${colorPrimario} leading-snug`}
         data-aos="fade-up"
         data-aos-delay="500"
       >
-        Será una fecha<br />
+        {texto5}<br />
         <span
-          class="text-2xl md:text-3xl font-normal font-montserrat uppercase tracking-widest text-amber-700"
+          class={`text-2xl md:text-3xl font-normal text-black font-montserrat uppercase tracking-widest `}
         >
-          inolvidable
+          {texto6}
         </span>
-        <ElegantIcon2 class="w-full max-h-18 mx-auto fill-amber-700" />
+        <ElegantIcon2 class={`w-full max-h-18 mx-auto fill-current`} />
       </p>
     </div>
 
@@ -83,7 +96,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
         <div class="text-8xl font-bold mb-2">{dia}</div>
         <p class="text-xl font-semibold text-gray-600 mb-4">Día</p>
         <img
-          src="/hero1.png"
+          src={imagen2}
           alt="Imagen 1"
           class="w-full h-auto rounded-lg shadow-md object-cover hover:scale-105 transition-transform duration-300"
           data-aos="zoom-in"
@@ -100,7 +113,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
         <div class="text-8xl font-bold mb-2">{mes}</div>
         <p class="text-xl font-semibold text-gray-600 mb-4">Mes</p>
         <img
-          src="/hero1.png"
+          src={imagen3}
           alt="Imagen 2"
           class="w-full h-auto rounded-lg shadow-md object-cover hover:scale-105 transition-transform duration-300"
           data-aos="zoom-in"
@@ -117,7 +130,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
         <div class="text-8xl font-bold mb-2">{ano}</div>
         <p class="text-xl font-semibold text-gray-600 mb-4">Año</p>
         <img
-          src="/hero1.png"
+          src={imagen4}
           alt="Imagen 3"
           class="w-full h-auto rounded-lg shadow-md object-cover hover:scale-105 transition-transform duration-300"
           data-aos="zoom-in"
@@ -150,7 +163,9 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
         Cuenta regresiva para el gran día
       </h2>
 
-      <div class="flex justify-center gap-8 flex-wrap">
+      <div
+        class="flex flex-col items-center gap-8 lg:flex-row lg:flex-wrap lg:justify-center"
+      >
         <!-- Días -->
         <div class="p-6" data-aos="flip-left" data-aos-delay="300">
           <div
@@ -214,7 +229,7 @@ import ElegantIcon1 from "../assets/ElegantIcon1.astro";
         <!-- Segundos -->
         <div class="p-6" data-aos="flip-right" data-aos-delay="450">
           <div
-            class="text-7xl font-bold mb-2 text-amber-700 animate-count"
+            class=`text-7xl font-bold mb-2 text-${colorPrimario} animate-count`
             id="segundos"
           >
             0

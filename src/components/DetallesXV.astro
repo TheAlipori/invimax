@@ -1,0 +1,109 @@
+---
+import Card from "./Card.astro";
+import ChurchIcon from "../assets/churchIcon.astro";
+import CalendarIcon from "../assets/calendarIcon.astro";
+import ClockIcon from "../assets/ClockIcon.astro";
+import NotasIcon from "../assets/notesIcon.astro";
+---
+
+<section class="w-full px-4 py-16 bg-white">
+  <h1 class="font-gloock text-center text-5xl mb-8">Detalles</h1>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Sección Ceremonia -->
+    <div class="md:col-span-2">
+      <h2
+        class="text-2xl font-semibold text-gray-800 mb-6 border-l-4 border-pink-600 pl-4"
+      >
+        Ceremonia
+      </h2>
+    </div>
+
+    <!-- Card Misa -->
+    <div
+      class="rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-pink-50 flex items-start gap-6"
+      data-aos="fade-right"
+      data-aos-delay="200"
+    >
+      <div class="text-4xl text-pink-600 min-w-[40px]">
+        <!-- <CrossIcon /> -->
+        <!-- Asume que tienes un icono de cruz para la misa -->
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Misa</h3>
+        <p class="text-gray-600 mb-1">Parroquia de San Juan</p>
+        <p class="text-gray-500 text-sm">Calle Reforma #123, Durango</p>
+        <div class="mt-3 flex items-center gap-2">
+          <ClockIcon class="text-pink-500" />
+          <span class="text-gray-600 font-medium">16:00 Hrs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Fiesta -->
+    <div
+      class="rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-pink-50 flex items-start gap-6"
+      data-aos="fade-left"
+      data-aos-delay="300"
+    >
+      <div class="text-4xl text-pink-600 min-w-[40px]">
+        <!-- <PartyIcon /> -->
+        <!-- Asume que tienes un icono de fiesta -->
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Recepción</h3>
+        <p class="text-gray-600 mb-1">Jardín Los Encinos</p>
+        <p class="text-gray-500 text-sm">Av. Libertad #456, Durango</p>
+        <div class="mt-3 flex items-center gap-2">
+          <ClockIcon class="text-pink-500" />
+          <span class="text-gray-600 font-medium">19:00 Hrs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Separador Decorativo -->
+    <div class="md:col-span-2 relative my-8">
+      <div class="absolute inset-0 flex items-center">
+        <div class="w-full border-t border-gray-200"></div>
+      </div>
+      <div class="relative flex justify-center">
+        <span class="bg-white px-4 text-sm text-pink-600"
+          >Información adicional</span
+        >
+      </div>
+    </div>
+
+    <!-- Cards existentes modificadas -->
+    <!-- Fecha -->
+    <div
+      class="rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-start gap-4 bg-white"
+      data-aos="zoom-in"
+      data-aos-delay="400"
+    >
+      <div class="text-3xl text-pink-600">
+        <CalendarIcon />
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-1">Fecha</h3>
+        <p class="text-gray-600">22 de Noviembre 2025</p>
+      </div>
+    </div>
+
+    <!-- Notas -->
+    <div
+      class="rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-start gap-4 bg-white"
+      data-aos="zoom-in"
+      data-aos-delay="500"
+    >
+      <div class="text-3xl text-pink-600">
+        <NotasIcon />
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-1">Notas</h3>
+        <p class="text-gray-600">
+          Evento al aire libre<br />Recomendamos llegar 15 minutos antes
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
