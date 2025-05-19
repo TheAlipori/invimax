@@ -2,7 +2,7 @@
 title:
 evento: "xv"
 #Hero section
-novio: Samyra
+novio: Samira
 novia: Sarellana Flores
 imagen: "/xvhero.jpg"
 imagen2: "/2.jpg"
