@@ -14,8 +14,8 @@ mes: 07
 ano: 25
 fecha: 12 de julio de 2025
 lugar: Catedral de la Ciudad
-padrexv: Jairo sarellana Cabrales
-madrexv: Armida flores Saucedo
+padrexv: Jairo Sarellana Cabrales
+madrexv: Armida Flores Saucedo
 texto1: ESTÁS INVITADO
 texto2: A mis XV años
 texto3: Con la bendición de mi familia y mucha emoción, quiero invitarte a celebrar este momento tan especial en mi vida.

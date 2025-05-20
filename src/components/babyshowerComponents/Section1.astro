@@ -1,0 +1,85 @@
+---
+import Toy3 from "../../assets/toy3.astro";
+import Cloud1 from "../../assets/cloud1.astro";
+import Topbabyshower from "../../assets/topbabyshower.astro";
+import Botbabyshower from "../../assets/botbabyshower.astro";
+---
+
+<section class="relative bg-white min-h-dvh overflow-hidden">
+  <!-- Elementos decorativos -->
+  <div class="flex justify-center">
+    <div
+      class="w-[150%] -mx-[25%]"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    >
+      <Topbabyshower class="size-64 w-full" />
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 right-0 opacity-30 rotate-45">
+    <Topbabyshower class="size-72" />
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="relative max-w-xl mx-auto px-4">
+    <div
+      class="flex flex-col items-center text-center gap-8"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <h2 class="text-4xl font-pattaya text-blue-400 mb-8">
+        ¡Acompáñanos en este<br />
+        <span class="text-red-300">momento mágico!</span>
+      </h2>
+
+      <div class="space-y-6 text-gray-600 max-w-md">
+        <p
+          class="text-lg leading-relaxed"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          Antes de que nuestro pequeño Pepe llegue al mundo,<br />
+          queremos compartir esta dulce espera contigo
+        </p>
+        <div class="flex justify-center w-full">
+          <!-- Contenedor padre para centrado -->
+          <div
+            class="group flex items-center gap-3 font-pattaya transition-all hover:gap-4 justify-center"
+          >
+            <!-- justify-center añadido -->
+            <span
+              class="text-3xl font-bold text-blue-400 transition-transform group-hover:scale-110"
+              >12</span
+            >
+            <div class="h-8 w-px bg-blue-300 transition-all group-hover:h-10">
+            </div>
+            <span
+              class="text-4xl text-blue-400 italic transition-transform group-hover:scale-105"
+              >Marzo</span
+            >
+            <div class="h-8 w-px bg-blue-300 transition-all group-hover:h-10">
+            </div>
+            <span
+              class="text-3xl font-bold text-blue-400 transition-transform group-hover:scale-110"
+              >2025</span
+            >
+          </div>
+        </div>
+        <p class="text-lg italic" data-aos="fade-left" data-aos-delay="600">
+          "Un nuevo capítulo de amor está por comenzar..."
+        </p>
+      </div>
+    </div>
+
+    <!-- Elemento decorativo inferior -->
+    <div
+      class="flex justify-center pt-6"
+      data-aos="fade-up"
+      data-aos-delay="800"
+    >
+      <div class="w-[120%] -mx-[25%]"><Botbabyshower class="w-full" /></div>
+    </div>
+  </div>
+</section>

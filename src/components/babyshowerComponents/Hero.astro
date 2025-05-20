@@ -1,0 +1,81 @@
+---
+import "@fontsource/pattaya";
+import "@fontsource/yesteryear";
+import Cloud1 from "../../assets/cloud1.astro";
+import Toy1 from "../../assets/toy1.astro";
+import Toy2 from "../../assets/toy2.astro";
+import ScrollIcon from "../../assets/ScrollIcon.astro";
+---
+
+<section class="relative bg-blue-300 min-h-dvh overflow-hidden">
+  <!-- Contenido centrado -->
+  <div class="relative max-w-xl mx-auto">
+    <div
+      class="flex flex-col items-center justify-center h-full text-center p-4 pt-64"
+    >
+      <h1
+        class="text-7xl text-white font-black"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+        data-aos-easing="ease-out-quad"
+      >
+        BABY
+      </h1>
+      <h1
+        class="text-7xl font-pattaya text-white"
+        data-aos="zoom-in-up"
+        data-aos-duration="1500"
+        data-aos-easing="ease-out-quad"
+      >
+        Shower
+      </h1>
+      <h1
+        class="font-bold text-white"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-easing="ease-out-quad"
+      >
+        EN HONOR A
+      </h1>
+      <h1
+        class="font-family text-6xl text-white"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        data-aos-easing="ease-out-quad"
+      >
+        Pepe
+      </h1>
+    </div>
+    <ScrollIcon
+      class="size-12 animate-bounce mx-auto mt-8 stroke-white"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    />
+
+    <!-- Juguetes dentro de max-w-xl -->
+    <Toy1
+      class="absolute top-0 left-0 size-56"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    />
+
+    <Toy2
+      class="absolute top-0 -right-32 size-80"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    />
+  </div>
+
+  <!-- Nube abajo, pero centrada dentro del max-w-xl -->
+  <div
+    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-xl"
+    data-aos="fade-up"
+    data-aos-duration="1500"
+    data-aos-easing="ease-out-quad"
+  >
+    <Cloud1 />
+  </div>
+</section>

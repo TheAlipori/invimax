@@ -3,8 +3,8 @@ import "../../styles/global.css"; // Importa tu CSS global aquí
 
 // [slug].astro
 import { getEntryBySlug, getCollection } from "astro:content";
-import HeroXV from "../../components/HeroXV.astro";
-import SectionOne from "../../components/SectionOne.astro";
+import Hero from "../../components/babyshowerComponents/Hero.astro";
+import SectionOne from "../../components/babyshowerComponents/Section1.astro";
 import SectionTwo from "../../components/SectionTwo.astro";
 import Layout from "../../layouts/Layout.astro";
 import Itinerario from "../../components/Itinerario.astro";
@@ -76,7 +76,7 @@ const { itinerario } = entry.data;
 ---
 
 <Layout>
-  <HeroXV
+  <Hero
     title={title}
     mensaje={mensaje}
     novio={novio}
@@ -84,38 +84,5 @@ const { itinerario } = entry.data;
     imagen={imagen}
     evento={evento}
   />
-  <NameXV />
-  <SectionOne
-    fecha_evento={fecha_evento}
-    dia={dia}
-    mes={mes}
-    ano={ano}
-    texto1={texto1}
-    texto2={texto2}
-    texto3={texto3}
-    texto4={texto4}
-    texto5={texto5}
-    texto6={texto6}
-    colorPrimario={colorPrimario}
-    imagen2={imagen2}
-    imagen3={imagen3}
-    imagen4={imagen4}
-  />
-  <Padres madrexv={madrexv} padrexv={padrexv} colorPrimario={colorPrimario} />
-  <Quotes colorPrimario={colorPrimario} quote={quote} />
-
-  <Itinerario itinerario={itinerario} />
-  <Whatsapp numerowp={numerowp} colorPrimario={colorPrimario} />
-
-  <GoogleMaps
-    lugar={lugar}
-    recepcion={recepcion}
-    ceremonia={ceremonia}
-    nombreIglesia={nombreIglesia}
-    direccionIglesia={direccionIglesia}
-    horaIglesia={horaIglesia}
-    nombreFiesta={nombreFiesta}
-    direccionFiesta={direccionFiesta}
-    horaFiesta={horaFiesta}
-  />
+  <SectionOne />
 </Layout>
