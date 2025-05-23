@@ -1,0 +1,34 @@
+---
+import Ornamento1 from "../../../assets/Ornamento1.astro";
+import Ornamento2 from "../../../assets/Ornamento2.astro";
+import "@fontsource/pattaya";
+import "@fontsource/yesteryear";
+import "@fontsource-variable/merriweather";
+---
+
+<section class="bg-[#F1E2D5]">
+  <div
+    class="relative bg-[#F1E2D5] max-w-2xl flex flex-col justify-center mx-auto overflow-hidden"
+  >
+    <div class="relative size-60 mx-auto">
+      <Ornamento1 class="absolute inset-0 w-full h-full fill-rose-300" />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-9xl font-gloock text-rose-300">A</h1>
+      </div>
+    </div>
+    <h1
+      class="text-pretty text-center p-8 text-rose-300 font-bold text-2xl font-elegant"
+    >
+      Hace quince años mis padres celebraron con amor mi llegada al mundo. Hoy
+      soy yo quien agradece su guía, su apoyo y todo su amor. Con mucha ilusión,
+      quiero compartir con ustedes este momento tan especial en mi vida.
+    </h1>
+    <Ornamento2 class="fill-rose-300 w-1/2 mx-auto" />
+  </div>
+
+  <div class="text-center space-y-2">
+    <h1 class="text-3xl font-serif tracking-wide">Alfredo Adame</h1>
+    <h1 class="text-3xl font-serif tracking-wide">&</h1>
+    <h1 class="text-3xl font-serif tracking-wide">America Mani</h1>
+  </div>
+</section>

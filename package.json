@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/merriweather": "^5.2.2",
     "@fontsource/gloock": "^5.2.5",
     "@fontsource/pattaya": "^5.2.5",
     "@fontsource/yesteryear": "^5.2.5",

@@ -1,0 +1,65 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import Hero from "../../components/quinceanera/Floral/Hero.astro";
+import Welcome from "../../components/quinceanera/Floral/Welcome.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("quinceaneras");
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntryBySlug("quinceaneras", slug);
+
+if (!entry) {
+  return new Response(null, {
+    status: 404,
+    statusText: "Quinceañera no encontrada",
+  });
+}
+
+// Extrae TODAS las props necesarias
+const {
+  title,
+  mensaje_principal,
+  colorPrimario,
+  imagenes,
+  quinceanera,
+  padres,
+  fecha_evento,
+  evento,
+  itinerario,
+  numerowp,
+  quote,
+  mensajes,
+  iglesia,
+  recepcion,
+} = entry.data;
+
+const { Content } = await entry.render();
+---
+
+<Layout>
+  <Hero
+    title={title}
+    mensaje={mensaje_principal}
+    quinceanera={quinceanera}
+    padres={padres}
+    imagen={imagenes.portada}
+    colorPrimario={colorPrimario}
+    fechaEvento={fecha_evento}
+    evento={evento}
+    itinerario={itinerario}
+    numerowp={numerowp}
+    quote={quote}
+    mensajes={mensajes}
+    iglesia={iglesia}
+    recepcion={recepcion}
+  />
+  <Welcome />
+  <Content />
+  <!-- Asegúrate de incluir esto para el markdown -->
+</Layout>
