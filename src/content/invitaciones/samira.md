@@ -46,5 +46,5 @@ horaIglesia: 5:00 p.m.
 nombreFiesta: Salon Géminis
 direccionFiesta: Guadalupe Lira 219-221, Altamira, 34635 Santiago Papasquiaro, Dgo.
 horaFiesta: 8:00 p.m.
-numerowp: 52674150422
+numerowp: 526741076096
 ---
