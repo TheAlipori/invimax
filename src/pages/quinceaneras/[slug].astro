@@ -1,8 +1,12 @@
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
-import Hero from "../../components/quinceanera/Floral/Hero.astro";
-import Welcome from "../../components/quinceanera/Floral/Welcome.astro";
+import Hero from "../../components/quinceanera/floral/Hero.astro";
+import Welcome from "../../components/quinceanera/floral/Welcome.astro";
 import Layout from "../../layouts/Layout.astro";
+import Date from "../../components/quinceanera/floral/Date.astro";
+import Image1 from "../../components/quinceanera/floral/image1.astro";
+import Itinerario from "../../components/quinceanera/floral/Itinerario.astro";
+import Detalles from "../../components/quinceanera/floral/Detalles.astro";
 
 export async function getStaticPaths() {
   const entries = await getCollection("quinceaneras");
@@ -60,6 +64,12 @@ const { Content } = await entry.render();
     recepcion={recepcion}
   />
   <Welcome />
+  <Image1 />
+
+  <Date fecha_evento={fecha_evento} />
+  <Itinerario itinerario={itinerario} />
+  <Detalles />
+
   <Content />
   <!-- Asegúrate de incluir esto para el markdown -->
 </Layout>
