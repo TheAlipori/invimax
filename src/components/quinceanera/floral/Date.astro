@@ -1,44 +1,63 @@
 ---
 import Ornamento3 from "../../../assets/Ornamento3.astro";
-const { fecha_evento } = Astro.props;
+const { fecha_evento, fecha_legible } = Astro.props;
 ---
 
 <section class="max-w-3xl mx-auto">
-  <h1 class="text-center text-5xl font-pattaya mt-24 text-gray-800">
+  <h1
+    class="text-center text-5xl font-pattaya mt-24 text-gray-800"
+    data-aos="fade-down"
+    data-aos-easing="ease-in-out"
+    data-aos-duration="800"
+  >
     Aparta la fecha
   </h1>
-  <Ornamento3 class="fill-rose-300 w-1/2 mx-auto" />
+  <Ornamento3
+    class="fill-rose-300 w-1/2 mx-auto"
+    data-aos="fade-up"
+    data-aos-delay="300"
+    data-aos-duration="600"
+  />
 
   <div class="grid grid-cols-2 mt-14 font-elegant">
     <!-- Columna izquierda: Día (ocupa 2 filas) -->
-    <div class="row-span-2 flex items-center justify-end pr-2 group">
+    <div
+      class="row-span-2 flex items-center justify-end pr-2 group"
+      data-aos="zoom-in"
+      data-aos-delay="400"
+    >
       <span
         class="text-9xl leading-none font-bold text-rose-300 transition-transform group-hover:scale-110"
       >
-        12
+        {fecha_legible.dia}
       </span>
     </div>
 
     <!-- Fila 1, columna derecha: Mes -->
-    <div class="flex items-center">
+    <div class="flex items-center" data-aos="fade-right" data-aos-delay="600">
       <span
         class="text-5xl text-gray-900 transition-transform group-hover:scale-105"
       >
-        Marzo
+        {fecha_legible.mes}
       </span>
     </div>
 
     <!-- Fila 2, columna derecha: Año -->
-    <div class="flex items-center">
+    <div class="flex items-center" data-aos="fade-left" data-aos-delay="600">
       <span
         class="text-4xl font-bold text-gray-900 transition-transform group-hover:scale-110"
       >
-        2025
+        {fecha_legible.ano}
       </span>
     </div>
   </div>
 
-  <h1 class="text-center text-3xl font-elegant mt-24 text-gray-800">
+  <h1
+    class="text-center text-3xl font-elegant mt-24 text-gray-800"
+    data-aos="fade-up"
+    data-aos-delay="800"
+    data-aos-offset="200"
+  >
     ¡Faltan pocos días para la fiesta!
   </h1>
 
@@ -176,6 +195,6 @@ const { fecha_evento } = Astro.props;
 </script>
 
 <div
-  class="hidden text-rose-500 text-blue-500 text-green-500 bg-rose-500 bg-blue-500 bg-green-500"
+  class="hidden text-rose-500 text-blue-500 text-green-500 bg-rose-500 bg-blue-500 bg-green-500 bg-rose-300 text-rose-300"
 >
 </div>

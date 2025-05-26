@@ -7,6 +7,8 @@ import Date from "../../components/quinceanera/floral/Date.astro";
 import Image1 from "../../components/quinceanera/floral/image1.astro";
 import Itinerario from "../../components/quinceanera/floral/Itinerario.astro";
 import Detalles from "../../components/quinceanera/floral/Detalles.astro";
+import Wishlist from "../../components/quinceanera/floral/Wishlist.astro";
+import Asistencia from "../../components/quinceanera/floral/Asistencia.astro";
 
 export async function getStaticPaths() {
   const entries = await getCollection("quinceaneras");
@@ -33,7 +35,9 @@ const {
   imagenes,
   quinceanera,
   padres,
+  padrinos,
   fecha_evento,
+  fecha_legible,
   evento,
   itinerario,
   numerowp,
@@ -62,14 +66,32 @@ const { Content } = await entry.render();
     mensajes={mensajes}
     iglesia={iglesia}
     recepcion={recepcion}
+    imagenes={imagenes}
   />
-  <Welcome />
-  <Image1 />
+  <Welcome
+    colorPrimaro={colorPrimario}
+    quinceanera={quinceanera}
+    mensaje_principal={mensaje_principal}
+    padres={padres}
+    padrinos={padrinos}
+  />
+  <Image1 imagenes={imagenes} />
 
-  <Date fecha_evento={fecha_evento} />
+  <Date
+    fecha_evento={fecha_evento}
+    fecha_legible={fecha_legible}
+    colorPrimaro={colorPrimario}
+    ,
+    padres={padres}
+  />
   <Itinerario itinerario={itinerario} />
-  <Detalles />
-
+  <Detalles
+    colorPrimaro={colorPrimario}
+    iglesia={iglesia}
+    recepcion={recepcion}
+  />
+  <Wishlist colorPrimaro={colorPrimario} />
+  <Asistencia numerowp={numerowp} colorPrimario={colorPrimario} />
   <Content />
   <!-- Asegúrate de incluir esto para el markdown -->
 </Layout>

@@ -1,7 +1,15 @@
+---
+const { imagenes } = Astro.props;
+---
+
 <section class="mt-4 max-w-xl mx-auto">
-  <div>
+  <div
+    data-aos="zoom-out"
+    data-aos-duration="1500"
+    data-aos-easing="ease-out-quad"
+  >
     <img
-      src="/valeria.jpeg"
+      src={imagenes.portada}
       alt="Flores decorativas"
       class="w-full object-cover mask-radial-at-center mask-radial-from-50% mask-radial-to-70%"
     />

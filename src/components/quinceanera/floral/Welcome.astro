@@ -4,6 +4,8 @@ import Ornamento2 from "../../../assets/Ornamento2.astro";
 import "@fontsource/pattaya";
 import "@fontsource/yesteryear";
 import "@fontsource-variable/merriweather";
+const { colorPrimario, quinceanera, mensaje_principal, padres, padrinos } =
+  Astro.props;
 ---
 
 <section class="">
@@ -24,7 +26,7 @@ import "@fontsource-variable/merriweather";
           data-aos-duration="1500"
           data-aos-easing="ease-out-quad"
         >
-          A
+          {quinceanera.nombre.charAt(0)}
         </h1>
       </div>
     </div>
@@ -34,9 +36,7 @@ import "@fontsource-variable/merriweather";
       data-aos-duration="1500"
       data-aos-easing="ease-out-quad"
     >
-      Hace quince años mis padres celebraron con amor mi llegada al mundo. Hoy
-      soy yo quien agradece su guía, su apoyo y todo su amor. Con mucha ilusión,
-      quiero compartir con ustedes este momento tan especial en mi vida.
+      {mensaje_principal}
     </h1>
     <div
       data-aos="fade-right"
@@ -48,9 +48,9 @@ import "@fontsource-variable/merriweather";
         <h1 class="text-2xl tracking-wide font-pattaya text-rose-300">
           Mis padres
         </h1>
-        <h1 class="text-3xl tracking-wide font-pattaya">Alfredo Adame</h1>
+        <h1 class="text-3xl tracking-wide font-pattaya">{padres.padre}</h1>
         <h1 class="text-3xl tracking-wide">&</h1>
-        <h1 class="text-3xl">America Mani</h1>
+        <h1 class="text-3xl">{padres.madre}</h1>
 
         <Ornamento2 class="fill-rose-300 w-1/2 mx-auto rotate-180" />
       </div>
@@ -63,13 +63,13 @@ import "@fontsource-variable/merriweather";
       data-aos-easing="ease-out-quad"
     >
       <Ornamento2 class="fill-rose-300 w-1/2 mx-auto" />
-      <div class="text-center space-y-2 font-pattaya mt-8">
+      <div class="text-center space-y-2 font-pattaya">
         <h1 class="text-2xl tracking-wide font-pattaya text-rose-300">
           Mis padrinos
         </h1>
-        <h1 class="text-3xl tracking-wide font-pattaya">Olivera Rodriguez</h1>
+        <h1 class="text-3xl tracking-wide font-pattaya">{padrinos.padrino}</h1>
         <h1 class="text-3xl tracking-wide">&</h1>
-        <h1 class="text-3xl">America Mani</h1>
+        <h1 class="text-3xl">{padrinos.madrina}</h1>
         <Ornamento2 class="fill-rose-300 w-1/2 mx-auto rotate-180" />
       </div>
     </div>

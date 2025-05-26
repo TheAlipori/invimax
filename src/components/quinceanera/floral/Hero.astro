@@ -5,16 +5,17 @@ import Princess from "../../../assets/Princess.png";
 import Toy1 from "../../../assets/toy1.astro";
 import Toy2 from "../../../assets/toy2.astro";
 import ScrollIcon from "../../../assets/ScrollIcon.astro";
+const { colorPrimario, quinceanera, imagenes } = Astro.props;
 ---
 
-<section class="relative bg-rose-300 min-h-dvh overflow-hidden">
+<section class=`relative bg-${colorPrimario} min-h-dvh overflow-hidden`>
   <!-- Contenido centrado -->
   <div class="relative max-w-xl mx-auto z-10">
     <div
       class="flex flex-col items-center justify-center h-full text-center p-4 pt-36"
     >
       <h1
-        class="text-7xl text-white font-black"
+        class="text-5xl text-white font-elegant -mb-6 lg:mt-12"
         data-aos="zoom-in"
         data-aos-duration="1500"
         data-aos-easing="ease-out-quad"
@@ -27,16 +28,16 @@ import ScrollIcon from "../../../assets/ScrollIcon.astro";
         data-aos-duration="1500"
         data-aos-easing="ease-out-quad"
       >
-        XV AÑOS
+        XV <span class="font-elegant text-5xl">AÑOS</span>
       </h1>
 
       <h1
-        class="font-family text-6xl text-white"
+        class="font-pattaya text-6xl text-white"
         data-aos="zoom-in"
         data-aos-duration="1500"
         data-aos-easing="ease-out-quad"
       >
-        Ana Maria
+        {quinceanera.nombre}
       </h1>
     </div>
     <div
@@ -56,7 +57,7 @@ import ScrollIcon from "../../../assets/ScrollIcon.astro";
     data-aos-duration="1500"
     data-aos-easing="ease-out-quad"
   >
-    <img src="/Princess.png" alt="Ilustración princesa" class="scale-[1.8]" />
+    <img src={imagenes.inicio} alt="Ilustración princesa" class="scale-[1.8]" />
   </div>
   <div
     class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[500px] z-0"
@@ -65,7 +66,7 @@ import ScrollIcon from "../../../assets/ScrollIcon.astro";
     data-aos-easing="ease-out-quad"
   >
     <img
-      src="/Recurso5.webp"
+      src={imagenes.flores}
       alt="Flores decorativas"
       class="w-full h-auto object-contain"
     />
