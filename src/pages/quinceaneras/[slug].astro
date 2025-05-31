@@ -3,6 +3,8 @@ import { getCollection, getEntryBySlug } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { getPlantillaComponents } from "../../lib/getPlantillaComponents";
 
+import Galeria from "../../components/quinceanera/marmol/Galeria.astro";
+
 export async function getStaticPaths() {
   const entries = await getCollection("quinceaneras");
   return entries.map((entry) => ({
@@ -98,10 +100,13 @@ const {
     iglesia={iglesia}
     recepcion={recepcion}
   />
+  {template === "marmol" && <Galeria imagenes={imagenes} />}
 
   <Wishlist colorPrimaro={colorPrimario} />
 
   <Asistencia numerowp={numerowp} colorPrimario={colorPrimario} />
+
+  <!-- 👇 Este componente solo se muestra si la plantilla es "marmol" -->
 
   <Content />
 </Layout>

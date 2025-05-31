@@ -1,0 +1,20 @@
+---
+const { imagenes } = Astro.props;
+---
+
+<section class="mt-4 max-w-xl mx-auto overflow-x-hidden">
+  <div
+    data-aos="fade-right"
+    data-aos-duration="1500"
+    data-aos-easing="ease-out-quad"
+  >
+    <img src={imagenes.galeria?.[0]} alt="Flores decorativas" class="w-full" />
+  </div>
+  <div
+    data-aos="fade-left"
+    data-aos-duration="1500"
+    data-aos-easing="ease-out-quad"
+  >
+    <img src={imagenes.galeria?.[1]} alt="Flores decorativas" class="w-full" />
+  </div>
+</section>
