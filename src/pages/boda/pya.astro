@@ -1,0 +1,553 @@
+---
+import Ornamento4 from "../../assets/Ornamento4.astro";
+import "@fontsource/pattaya";
+import "@fontsource/yesteryear";
+import "@fontsource-variable/merriweather";
+import Ornamento3 from "../../assets/Ornamento3.astro";
+import Ornamento2 from "../../assets/Ornamento2.astro";
+import ScrollIcon from "../../assets/ScrollIcon.astro";
+import Layout from "../../layouts/Layout.astro";
+import IglesiaIcon from "../../../public/icons/SalonIcon.astro";
+import ClockIcon from "../../assets/ClockIcon.astro";
+import ImportanteIcon from "../../assets/calendarIcon.astro";
+import SalonIcon from "../../../public/icons/SalonIcon.astro";
+---
+
+<Layout>
+  <!-- 
+Heroooooooooooooooooooooooooooooooooooooooooooooooooo -->
+  <section class="bg-[#F2E9DA]">
+    <section
+      class="w-full max-w-[1000px] h-screen mx-auto bg-[url(/backgroundpaulina.jpg)] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center relative"
+      data-aos="fade-left"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    >
+      <!-- Icono en la esquina inferior derecha -->
+      <div
+        class="absolute bottom-0 right-0 mb-8 mr-8"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        data-aos-easing="ease-out-quad"
+      >
+        <ScrollIcon class="size-16 animate-bounce stroke-black" />
+      </div>
+    </section>
+  </section>
+
+  <!-- WELCOME SECTIOOOOOOOOOOON -->
+  <section class="max-w-xl mx-auto px-4 py-8 text-center">
+    <h1
+      class="font-elegant text-3xl md:text-4xl mb-8 leading-tight"
+      data-aos="zoom-in"
+      data-aos-duration="1200"
+    >
+      Te invitamos a celebrar con nosotros el gran día de nuestra boda
+    </h1>
+
+    <div data-aos="flip-up" data-aos-duration="1000">
+      <Ornamento4 class="fill-[#957221]" />
+    </div>
+
+    <div class="space-y-6 mb-10" data-aos="fade-up" data-aos-delay="300">
+      <h2
+        class="font-elegant text-2xl font-semibold italic mb-6"
+        data-aos="fade-right"
+        data-aos-delay="400"
+      >
+        Con la bendición de nuestros padres
+      </h2>
+
+      <Ornamento2
+        class="fill-[#957221] w-1/2 mx-auto"
+        data-aos="zoom-in"
+        data-aos-delay="500"
+        data-aos-duration="700"
+      />
+
+      <div class="mb-6" data-aos="fade-left" data-aos-delay="600">
+        <h3 class="font-elegant text-lg mb-2">Padres Paternos</h3>
+        <p class="text-gray-700 font-pattaya text-2xl">
+          Yolanda Zamago Vazquez
+        </p>
+        <p class="text-gray-700 font-pattaya text-2xl">José Luis Reyes Muñoz</p>
+      </div>
+
+      <Ornamento2
+        class="fill-[#957221] w-1/2 mx-auto"
+        data-aos="zoom-in-up"
+        data-aos-delay="700"
+        data-aos-duration="700"
+      />
+
+      <div data-aos="fade-right" data-aos-delay="800">
+        <h3 class="font-elegant text-lg mb-2">Padres Maternos</h3>
+        <p class="text-gray-700 font-pattaya text-2xl">
+          Victor Manuel Zena Hernandéz
+        </p>
+        <p class="text-gray-700 font-pattaya text-2xl">
+          Maria de los Angeles Frayre Santamaría
+        </p>
+      </div>
+
+      <Ornamento2
+        class="fill-[#957221] w-1/2 mx-auto"
+        data-aos="zoom-in-down"
+        data-aos-delay="900"
+        data-aos-duration="700"
+      />
+
+      <h2
+        class="font-elegant text-2xl font-semibold italic mb-6"
+        data-aos="fade-up"
+        data-aos-delay="1000"
+      >
+        Uniremos nuestras vidas en santo matrimonio
+      </h2>
+
+      <div class="mb-6" data-aos="fade-up" data-aos-delay="1100">
+        <h3 class="font-elegant text-lg mb-2">Novios</h3>
+        <p class="text-gray-700 font-pattaya text-2xl">Paulina Zena Frayre</p>
+        <p class="text-gray-700 font-pattaya text-2xl">
+          Luis Aaron Reyes Zamago
+        </p>
+      </div>
+
+      <Ornamento3
+        class="fill-[#957221] w-1/2 mx-auto"
+        data-aos="zoom-in"
+        data-aos-delay="1200"
+        data-aos-duration="600"
+      />
+    </div>
+  </section>
+
+  <!-- DATE SECTION -->
+  <section class="max-w-3xl mx-auto overflow-x-hidden">
+    <h1
+      class="text-center text-5xl font-pattaya mt-24 text-gray-800"
+      data-aos="fade-down"
+      data-aos-easing="ease-in-out"
+      data-aos-duration="800"
+    >
+      Aparta la fecha
+    </h1>
+    <Ornamento3
+      class="fill-[#957221] w-1/2 mx-auto"
+      data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-duration="600"
+    />
+
+    <div class="grid grid-cols-2 mt-14 font-elegant">
+      <!-- Columna izquierda: Día (ocupa 2 filas) -->
+      <div
+        class="row-span-2 flex items-center justify-end pr-2 group"
+        data-aos="zoom-in"
+        data-aos-delay="400"
+      >
+        <span
+          class="text-9xl leading-none font-bold text-[#957221] transition-transform group-hover:scale-110"
+        >
+          2
+        </span>
+      </div>
+
+      <!-- Fila 1, columna derecha: Mes -->
+      <div class="flex items-center" data-aos="fade-right" data-aos-delay="600">
+        <span
+          class="text-5xl text-gray-900 transition-transform group-hover:scale-105"
+        >
+          AGOSTO
+        </span>
+      </div>
+
+      <!-- Fila 2, columna derecha: Año -->
+      <div class="flex items-center" data-aos="fade-left" data-aos-delay="600">
+        <span
+          class="text-4xl font-bold text-gray-900 transition-transform group-hover:scale-110"
+        >
+          2025
+        </span>
+      </div>
+    </div>
+
+    <h1
+      class="text-center text-3xl font-elegant mt-24 text-gray-800"
+      data-aos="fade-up"
+      data-aos-delay="800"
+      data-aos-offset="200"
+    >
+      ¡Faltan pocos días para la fiesta!
+    </h1>
+
+    <div class="py-12 text-center" data-aos="fade-in" data-aos-duration="1000">
+      <div
+        class="flex flex-row flex-wrap justify-center items-center gap-8 font-pattaya"
+      >
+        <!-- Días -->
+        <div class="p-6" data-aos="flip-left" data-aos-delay="300">
+          <div
+            class="text-7xl font-bold mb-2 text-black animate-count"
+            id="dias"
+          >
+            0
+          </div>
+          <div class="text-xl uppercase tracking-wide text-black">Días</div>
+        </div>
+
+        <!-- Horas -->
+        <div class="p-6" data-aos="flip-up" data-aos-delay="350">
+          <div
+            class="text-7xl font-bold mb-2 text-black animate-count"
+            id="horas"
+          >
+            0
+          </div>
+          <div class="text-xl uppercase tracking-wide text-black">Horas</div>
+        </div>
+
+        <!-- Minutos -->
+        <div class="p-6" data-aos="flip-down" data-aos-delay="400">
+          <div
+            class="text-7xl font-bold mb-2 text-black animate-count"
+            id="minutos"
+          >
+            0
+          </div>
+          <div class="text-xl uppercase tracking-wide text-black">Minutos</div>
+        </div>
+
+        <!-- Segundos -->
+        <div class="p-6" data-aos="flip-right" data-aos-delay="450">
+          <div
+            class="text-7xl font-bold mb-2 text-black animate-count"
+            id="segundos"
+          >
+            0
+          </div>
+          <div class="text-xl uppercase tracking-wide text-black">Segundos</div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .animate-count {
+        animation: countPop 0.5s ease-out;
+      }
+
+      @keyframes countPop {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .animate-pulse-slow {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        50% {
+          opacity: 0.8;
+          transform: translateY(-5px);
+        }
+      }
+
+      .animate-bounce-horizontal {
+        animation: bounceH 1.5s ease-in-out infinite;
+      }
+
+      @keyframes bounceH {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(5px);
+        }
+      }
+    </style>
+  </section>
+  <script client:load>
+    // Definir la fecha objetivo como una variable
+    const fecha_evento = "August 2, 2025 00:00:00";
+
+    function updateCountdown() {
+      const targetDate = new Date(fecha_evento).getTime();
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML =
+          "<div class='text-xl font-bold'>¡El evento ha comenzado! 🎉</div>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("dias").innerText = days;
+      document.getElementById("horas").innerText = hours
+        .toString()
+        .padStart(2, "0");
+      document.getElementById("minutos").innerText = minutes
+        .toString()
+        .padStart(2, "0");
+      document.getElementById("segundos").innerText = seconds
+        .toString()
+        .padStart(2, "0");
+    }
+
+    // Actualizar cada segundo
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+  <!-- DETALLES SECCION -->
+  <section class="max-w-xl mx-auto overflow-x-hidden">
+    <h1
+      class="font-pattaya text-center text-5xl"
+      data-aos="fade-down"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="800"
+    >
+      Los detalles
+    </h1>
+
+    <Ornamento3
+      class="fill-[#957221] w-1/2 mx-auto pb-8"
+      data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-duration="600"
+    />
+
+    <div
+      class="grid grid-cols-1 bg-[url('/bgmarmol.webp')] bg-cover bg-center p-4"
+    >
+      <div class="relative mt-16">
+        <!-- Card 1 - Misa -->
+        <div data-aos="fade-right" data-aos-delay="400" data-aos-offset="200">
+          <div
+            class="relative z-10 text-center border-3 border-[#957221] rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow bg-white mx-2 -mt-12"
+          >
+            <div>
+              <IglesiaIcon
+                class="size-16 fill-[#957221] mx-auto mb-4 mt-1"
+                data-aos="zoom-in"
+                data-aos-delay="500"
+              />
+              <h1
+                class="text-4xl font-elegant"
+                data-aos="fade-down"
+                data-aos-delay="600"
+              >
+                Misa
+              </h1>
+
+              <!-- Horario con icono -->
+              <div
+                class="flex items-start justify-center gap-2 mt-4"
+                data-aos="fade-right"
+                data-aos-delay="700"
+              >
+                <p class="font-elegant text-gray-600 font-bold">
+                  Templo Nuestra Señora de los Remedios
+                </p>
+              </div>
+
+              <div
+                class="flex items-start justify-center gap-2 mt-4"
+                data-aos="fade-right"
+                data-aos-delay="700"
+              >
+                <ClockIcon class="size-5 fill-[#957221] mt-1" />
+                <p class="font-elegant text-gray-600">Hora: 7:00 p.m.</p>
+              </div>
+
+              <!-- Dirección con icono -->
+              <div
+                class="flex items-start justify-center gap-2 mt-2"
+                data-aos="fade-left"
+                data-aos-delay="800"
+              >
+                <ImportanteIcon class="size-5 fill-[#957221] mt-1" />
+                <p class="font-elegant text-gray-600 text-center">
+                  Santuario de Ntra. Sra. de Los Remedios, Lindavista, Los
+                  Remedios, 34100 Durango, Dgo.
+                </p>
+              </div>
+
+              <a
+                href="https://maps.app.goo.gl/gzT8QxRKGFrrKeEk8"
+                target="_blank"
+                class="bg-[#957221] hover:bg-[#957221] text-white font-elegant px-4 py-2 rounded transition-colors inline-block mt-4"
+                data-aos="zoom-in"
+                data-aos-delay="900"
+              >
+                Abrir en Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 - Recepcion -->
+        <div
+          class="relative mt-16"
+          data-aos="fade-left"
+          data-aos-delay="500"
+          data-aos-offset="150"
+        >
+          <div
+            class="relative z-10 text-center border-2 border-[#957221] rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow bg-white mx-2 -mt-12"
+          >
+            <div>
+              <SalonIcon
+                class="size-16 fill-[#957221] mx-auto mb-4 mt-1"
+                data-aos="zoom-in"
+                data-aos-delay="600"
+              />
+              <h1
+                class="text-4xl font-elegant"
+                data-aos="fade-down"
+                data-aos-delay="700"
+              >
+                Recepción
+              </h1>
+
+              <div
+                class="flex items-start justify-center gap-2 mt-4"
+                data-aos="fade-right"
+                data-aos-delay="700"
+              >
+                <p class="font-elegant text-gray-600 font-bold">
+                  Gran Salón Tres Soles
+                </p>
+              </div>
+
+              <!-- Horario con icono -->
+              <div
+                class="flex items-start justify-center gap-2 mt-4"
+                data-aos="fade-right"
+                data-aos-delay="800"
+              >
+                <ClockIcon class="size-5 fill-[#957221]" />
+                <p class="font-elegant text-gray-600">Hora: 9:00</p>
+              </div>
+
+              <!-- Dirección con icono -->
+              <div
+                class="flex items-start justify-center gap-2 mt-2"
+                data-aos="fade-left"
+                data-aos-delay="900"
+              >
+                <ImportanteIcon class="size-5 fill-[#957221] mt-1" />
+                <p class="font-elegant text-gray-600 text-center">
+                  Blvd. Cnel. Enrique Carrola Antuna 900, José Guadalupe
+                  Rodriguez, 34280 Durango, Dgo.
+                </p>
+              </div>
+
+              <a
+                href="https://maps.app.goo.gl/23ReXF1EZYcCAx6N9"
+                target="_blank"
+                class="bg-[#957221] hover:bg-amber-700 text-white font-elegant px-4 py-2 rounded transition-colors inline-block mt-4"
+                data-aos="zoom-in"
+                data-aos-delay="1000"
+              >
+                Abrir en Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WISHLIST SECCION -->
+  <section class="relative py-20 px-6 overflow-hidden">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-pattaya" data-aos="fade-up">
+        Nuestra mesa de regalos
+      </h2>
+      <Ornamento3 class="fill-[#957221] w-1/2 mx-auto mb-8" />
+
+      <div class="flex flex-col items-center space-y-8">
+        <!-- Texto descriptivo -->
+        <div class="max-w-xl" data-aos="fade-up" data-aos-delay="200">
+          <p class="text-lg leading-relaxed font-elegant">
+            Tu presencia es el mejor regalo, pero si deseas hacerme un obsequio,
+            lo tomaremos con mucho cariño
+          </p>
+        </div>
+
+        <!-- Tarjeta de wishlist -->
+        <div class="w-full max-w-md" data-aos="fade-up" data-aos-delay="400">
+          <div class="">
+            <div class="flex justify-center">
+              <a
+                href=""
+                target="_blank"
+                class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#957221] hover:bg-black transition-colors duration-300"
+              >
+                <!-- <AmazonIcon class="size-9 fill-white mr-3" /> -->
+                Ver Wishlist
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p
+          class="mt-6 text-gray-500 italic text-center font-elegant"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          Tu regalo será recibido con mucho amor ❤️
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- ASISTENCIA SECCION -->
+  <section
+    class="w-full px-4 py-10 flex flex-col items-center text-center overflow-x-hidden bg-cover bg-center bg-no-repeat bg-[url(/bgmarmol.webp)] max-w-2xl mx-auto"
+    data-aos="fade-up"
+  >
+    <h2
+      class="text-5xl sm:text-5xl font-gloock text-gray-800 mb-4"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      ¿Nos acompañas?
+    </h2>
+    <p
+      class="text-gray-600 mb-6 max-w-xl font-bold text-shadow/30"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      Confírmanos tu asistencia para poder recibirte con todo preparado y con
+      mucha alegría.
+    </p>
+    <a
+      href=`https://wa.me/526181228620?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20tu%20Boda`
+      target="_blank"
+      rel="noopener noreferrer"
+      class=`bg-[#957221] hover:bg-gray-950 text-white px-6 py-3 rounded-full text-lg font-medium transition`
+    >
+      Confirmar por WhatsApp
+    </a>
+  </section>
+</Layout>
