@@ -1,0 +1,17 @@
+---
+const { imagenes } = Astro.props;
+---
+
+<section class="mt-4 max-w-xl mx-auto overflow-x-hidden">
+  <div
+    data-aos="zoom-out"
+    data-aos-duration="1500"
+    data-aos-easing="ease-out-quad"
+  >
+    <img
+      src={imagenes.portada}
+      alt="Flores decorativas"
+      class="w-full object-cover rounded-full"
+    />
+  </div>
+</section>

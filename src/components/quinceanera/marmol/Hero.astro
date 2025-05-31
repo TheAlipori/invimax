@@ -1,0 +1,47 @@
+---
+import "@fontsource/pattaya";
+import "@fontsource/yesteryear";
+import Princess from "../../../assets/Princess.png";
+import Toy1 from "../../../assets/toy1.astro";
+import Toy2 from "../../../assets/toy2.astro";
+import ScrollIcon from "../../../assets/ScrollIcon.astro";
+const { colorPrimario, quinceanera, imagenes } = Astro.props;
+---
+
+<section
+  class="w-screen h-dvh flex justify-center items-center relative bg-black bg-cover bg-center"
+>
+  <!-- Contenedor principal -->
+  <div class="relative w-full h-full mx-auto overflow-hidden">
+    <!-- Imagen con efecto suave -->
+    <img
+      src="/portada.jpeg"
+      alt="Foto de la pareja"
+      class="max-w-[592px] mx-auto h-full object-cover transform scale-100"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    />
+
+    <!-- Overlay para legibilidad -->
+
+    <!-- Texto con animación unificada -->
+    <div
+      class="absolute top-10 left-1/2 transform -translate-x-1/2 w-full px-4 text-right max-w-[572px]"
+      data-aos="fade-left"
+      data-aos-duration="1500"
+      data-aos-easing="ease-out-quad"
+    >
+      <h1
+        class="text-white text-6xl md:text-8xl font-gloock mb-2 tracking-wide text-shadow-lg/30"
+      >
+        XV
+      </h1>
+      <h1
+        class="text-white text-6xl md:text-8xl font-gloock mb-2 tracking-wide text-shadow-lg/30"
+      >
+        {quinceanera.nombre}
+      </h1>
+    </div>
+  </div>
+</section>
